@@ -7,7 +7,11 @@ class Gencog(commands.Cog):
 
     @commands.command()
     async def who(self, ctx):
-      await ctx.channel.send("I am MorganBot, premium Discord concierge.")
+      await ctx.channel.send("I am MorganBot, a premium Discord concierge bot. \n \nBuilt by Chase Boyd in Python.")
+
+    @commands.command()
+    async def slv(self, ctx):
+      await ctx.channel.send("https://www.kitco.com/charts/livesilver.html")
 
 
 def setup(bot):
