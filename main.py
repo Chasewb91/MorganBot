@@ -23,6 +23,10 @@ async def on_ready():
     print(f'{client.user} has connected to Discord!')
     await client.change_presence(activity=discord.Game('Poker'))  # discord presence
 
+@client.event
+async def on_member_join(member):
+  print(f"{member} has joined the server")
+
 @client.command()
 async def ping(ctx):
   await ctx.channel.send("pong")
