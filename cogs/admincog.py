@@ -19,8 +19,14 @@ class Admin(commands.Cog):
 
     @commands.command()
     @commands.has_role('Admin')
-    async def remove(self, ctx, channel: discord.TextChannel, reason =None):
+    async def removechan(self, ctx, channel: discord.TextChannel, reason =None):
       await channel.delete()
+
+    @commands.command()
+    @commands.has_role('Admin')
+    async def removecat(self, ctx, category: discord.CategoryChannel):
+      await discord.CategoryChannel.delete(category)
+
 
     @commands.command()
     @commands.has_role('Admin')
