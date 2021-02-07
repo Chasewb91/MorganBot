@@ -1,15 +1,21 @@
 import discord
 from discord.ext import commands
 
+
 class Admin(commands.Cog):
     def __init__(self, bot,):
         self.bot = bot
         
     @commands.command()
     @commands.has_role('Admin')
-    async def make(self, ctx, *, arg):
-	    guild = ctx.channel.guild
-	    await guild.create_text_channel(arg)  
+    async def makechan(self, ctx, channel, category: discord.CategoryChannel):
+      await ctx.guild.create_text_channel(channel, category=category) 
+
+    @commands.command()
+    @commands.has_role('Admin')
+    async def makecat(self, ctx, category):
+      await ctx.guild.create_category(category)
+
 
     @commands.command()
     @commands.has_role('Admin')
