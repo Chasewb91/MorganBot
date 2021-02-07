@@ -1,13 +1,9 @@
 from discord.ext import commands
-from discord import Guild
 import discord
-import keep_alive
 import os
 from dotenv import load_dotenv
 
-
-
-load_dotenv()  # pulls discord bot token from .env file
+load_dotenv()  
 TOKEN = os.getenv('DISCORD_TOKEN')  # pulls discord bot token from .env file
 
 key = os.getenv('key')
@@ -17,10 +13,7 @@ wkey = os.getenv('wkey')
 intents = discord.Intents.default()
 intents.members = True
 
-
 client = commands.Bot(command_prefix='$', intents=intents)  #Makes the bot prefix.
-
-
 
 @client.event
 async def on_ready():
@@ -31,9 +24,9 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
   member = member
+  chan = client.get_channel(807754507122638848) 
   print(f"{member} has joined the server")
-  chan = client.get_channel(807754507122638848)
-  await chan.send(f"Welcome, {member.mention}.")
+  await chan.send(f"Welcome to the Test Bunker, {member.mention}.")
   await member.send(content="welcome to the server, and stay awhile!")
   
 
@@ -41,21 +34,20 @@ async def on_member_join(member):
 async def ping(ctx):
   await ctx.channel.send("pong")
 
-@client.command()
+@client.command(help = "Used to test member greetings - Admin only") 
+@commands.has_role('Admin')
 async def join_test(ctx, member: discord.Member):
-    client.dispatch('member_join', member)
+  client.dispatch('member_join', member)
 
 
 #cogs
 
 client.load_extension("cogs.gencog")
 
-client.load_extension("cogs.dicecog")
+client.load_extension("cogs.gamescog")
 
 client.load_extension("cogs.admincog")
 
-
-keep_alive.keep_alive()  #keep this at the end
 
 client.run(TOKEN)
 
