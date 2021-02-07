@@ -15,6 +15,19 @@ class Admin(commands.Cog):
     @commands.has_role('Admin')
     async def remove(self, ctx, channel: discord.TextChannel, reason =None):
       await channel.delete()
+
+    @commands.command()
+    @commands.has_role('Admin')
+    async def addrole(self, ctx, member: discord.Member, role: discord.Role, atomic = True):
+      await member.add_roles(role)
+
+    @commands.command()
+    @commands.has_role('Admin')
+    async def removerole(self, ctx, member: discord.Member, role: discord.Role, atomic = True):
+      await member.remove_roles(role)
+
+    
+
         
 def setup(bot):
   bot.add_cog(Admin(bot)) 
