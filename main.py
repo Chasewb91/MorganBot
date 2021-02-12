@@ -48,6 +48,8 @@ client.load_extension("cogs.gamescog")
 
 client.load_extension("cogs.admincog")
 
+client.load_extension("cogs.dbcog")
+
 
 client.run(TOKEN)
 

@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from typing import Optional
 
 
 class Admin(commands.Cog):
@@ -8,7 +9,7 @@ class Admin(commands.Cog):
         
     @commands.command()
     @commands.has_role('Admin')
-    async def makechan(self, ctx, channel, category: discord.CategoryChannel):
+    async def makechan(self, ctx, channel, category: Optional[discord.CategoryChannel]):
       await ctx.guild.create_text_channel(channel, category=category) 
 
     @commands.command()
@@ -37,6 +38,18 @@ class Admin(commands.Cog):
     @commands.has_role('Admin')
     async def removerole(self, ctx, member: discord.Member, role: discord.Role, atomic = True):
       await member.remove_roles(role)
+
+    @commands.command()
+    @commands.has_role('Admin')
+    async def kick(self, ctx, user: discord.Member):
+      await ctx.guild.kick(user)
+
+
+    @commands.command()
+    @commands.has_role('Admin')
+    async def ban(self, ctx, user: discord.Member):
+      await ctx.guild.ban(user)
+
 
     
 
