@@ -3,3 +3,8 @@
 MorganBot - Discord concierge bot. 
 
 Built using Python on repl.it
+
+Features
+ - General Administrative (Commands to create/delete channels or assign roles)
+ - A numbers guessing game, and dice roller. 
+ - A score awarding/tracking system  ($point @user to give them a point, $query to see your current points)
