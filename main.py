@@ -50,6 +50,8 @@ client.load_extension("cogs.admincog")
 
 client.load_extension("cogs.dbcog")
 
+client.load_extension("cogs.cryptocog")
+
 
 client.run(TOKEN)
 
