@@ -1,8 +1,11 @@
 from discord.ext import commands
 import discord
 import os
+from dotenv import load_dotenv
 
-TOKEN = os.environ['privatekey']
+
+load_dotenv()
+TOKEN = os.getenv('privatekey')
 
 intents = discord.Intents.default()
 intents.members = True
