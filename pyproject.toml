@@ -12,6 +12,7 @@ python-dotenv = "^0.15.0"
 d20 = "^1.0.4"
 spotipy = "^2.16.1"
 tinydb = "^4.3.0"
+cryptocompare = "^0.7.5"
 
 [tool.poetry.dev-dependencies]
 

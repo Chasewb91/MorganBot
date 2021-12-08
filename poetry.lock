@@ -73,6 +73,17 @@ version = "7.1.2"
 
 [[package]]
 category = "main"
+description = "Wrapper for CryptoCompare.com"
+name = "cryptocompare"
+optional = false
+python-versions = ">=3"
+version = "0.7.5"
+
+[package.dependencies]
+requests = "*"
+
+[[package]]
+category = "main"
 description = "A formal grammar-based dice parser and roller for D&D and other dice systems."
 name = "d20"
 optional = false
@@ -292,7 +303,7 @@ idna = ">=2.0"
 multidict = ">=4.0"
 
 [metadata]
-content-hash = "d42a5c162419aa7c3c343c8952056634a9d3bd9493e4b966589218ded717af14"
+content-hash = "817dcc5bed4b4fd15f5dca8206407195105303082fe35d988c26d8b231baedf8"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -358,6 +369,9 @@ chardet = [
 click = [
     {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
     {file = "click-7.1.2.tar.gz", hash = "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"},
+]
+cryptocompare = [
+    {file = "cryptocompare-0.7.5.tar.gz", hash = "sha256:7583d5519dc74cbd9e4c704e1530c5e8446f4500d4dda481357616e3439410da"},
 ]
 d20 = [
     {file = "d20-1.0.4-py3-none-any.whl", hash = "sha256:7cd9bc777ac557a9c24fe75099f5ee55987ce91cfd1248763ee2a7ccf3987317"},

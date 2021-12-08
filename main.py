@@ -1,14 +1,8 @@
 from discord.ext import commands
 import discord
 import os
-from dotenv import load_dotenv
 
-load_dotenv()  
-TOKEN = os.getenv('DISCORD_TOKEN')  # pulls discord bot token from .env file
-
-key = os.getenv('key')
-
-wkey = os.getenv('wkey')
+TOKEN = os.environ['privatekey']
 
 intents = discord.Intents.default()
 intents.members = True
