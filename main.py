@@ -1,8 +1,7 @@
 from discord.ext import commands
 import discord
-import os
 
-TOKEN = os.environ['privatekey']
+TOKEN = DiscordTokenGoesHere
 
 intents = discord.Intents.default()
 intents.members = True
