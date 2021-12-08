@@ -1,7 +1,8 @@
 from discord.ext import commands
 import discord
+import os
 
-TOKEN = DiscordTokenGoesHere
+TOKEN = DISCORD_TOKEN
 
 intents = discord.Intents.default()
 intents.members = True
