@@ -3,9 +3,13 @@ import discord
 import os
 from dotenv import load_dotenv
 
+<<<<<<< HEAD
 
 load_dotenv()
 TOKEN = os.getenv('privatekey')
+=======
+TOKEN=os.getenv['privatekey']
+>>>>>>> a35213d56596a7716616bd57542aed673c42c641
 
 intents = discord.Intents.default()
 intents.members = True
