@@ -7,6 +7,4 @@ Built using Python
 Features
  - General Administrative (Commands to create/delete channels or assign roles)
  - A numbers guessing game, and dice roller. 
- - A score awarding/tracking system  ($point @user to give them a point, $query to see your current points)\
- 
-Invite to your Discord server - https://discord.com/oauth2/authorize?client_id=806974489900220427&permissions=8&scope=bot
+ - A score awarding/tracking system  ($point @user to give them a point, $query to see your current points.)
